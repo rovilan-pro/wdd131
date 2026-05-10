@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Georgia, serif;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+
+/* Navigation */
+nav {
+  background: black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Body/Main */
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.content h1 {
+grid-column: 1/ -1;
+}
+
+main section {
+  background: #ccc;
+  padding: 20px;
+}
+
+aside {
+  background: #eee;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
