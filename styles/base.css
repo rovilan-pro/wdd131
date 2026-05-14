@@ -36,6 +36,10 @@ nav a {
 }
 
 /* Body/Main */
+main {
+  background: #aaa;
+}
+
 .content {
   display: grid;
   grid-template-columns: 3fr 1fr;
