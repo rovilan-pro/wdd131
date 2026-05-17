@@ -56,6 +56,10 @@ nav.open {
     display: flex;
 }
 
+nav a:hover {
+    background-color: grey;
+    border-radius: 5px;
+}
 /* Body/Main */
 main {
   background: #aaa;
