@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines</title>
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Philippines</h1>
+    </header>
+
+    <main>
+
+    <div class="hero-container">
+
+        <picture>
+            <source
+                media="(min-width: 768px)"
+                srcset="images/manila_philippines.webp">
+
+            <img
+                src="images/ph.webp"
+                alt="Place">
+        </picture>
+
+        <section class="data">
+        <h2>Data</h2>
+
+        <p><strong>Capital:</strong> Manila</p>
+        <p><strong>Population:</strong> 115,000,000</p>
+        <p><strong>Languages:</strong> Filipino, English</p>
+        <p><strong>Currency:</strong> Philippine Peso</p>
+        <p><strong>Area:</strong> 300,000 km²</p>        
+        </section>
+
+        <section class="weather">
+                <h2>Weather</h2>
+
+        <img
+            class="weather-icon"
+            src="images/sun.svg"
+            alt="weather">
+
+        <p><strong>Temperature:</strong> 10°C</p>
+        <p><strong>Wind Speed:</strong> 4.8 km/h</p>
+        <p><strong>Conditions:</strong> Sunny</p>
+        <p><strong>Wind Chill:</strong>
+        <span id="windchill"></span>
+        </p>
+        </section>
+
+    </div>
+
+</main>
+
+<footer>
+    <p> 
+        &copy;
+         <span id="currentyear"></span> 
+        🏝️ Rovilan Alec Dela Torre 🏝️ Philippines
+    </p>
+
+    <p id="lastModified"></p>
+    
+</footer>
+
+</body>
+</html>
