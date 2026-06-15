@@ -6,6 +6,12 @@
     --body-font: Plus Jakarta Sans, sans-serif;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--body-font);
     background-color: var(--primary-color); 
@@ -17,9 +23,263 @@ h1, h2, h3 {
     color: black;
 }
 
-header {
+h2 {
+    text-align: center;
     background-color: var(--secondary-color);
-    padding: 20px;
-    color:  black;
 }
 
+header, main, footer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+}
+
+/* Logo */
+#logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-left: 20px;
+    color: var(--accent-color);
+    flex-grow: 1;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Navigation */
+.navigation {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.navigation a {
+    color: var(--accent-color);
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 6px 8px;
+}
+
+#menu-button {
+    margin-left: auto;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.navigation a:hover {
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Spacing */
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 4px solid var(--accent-color);
+}
+
+footer p {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 20px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+}
+
+.gallery figure {
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.gallery img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    display: block;
+
+}
+
+.gallery figcaption {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+/* CTA */
+.cta {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    text-align: center;
+    border: #333;
+}
+
+.cta p {
+    text-align: center;
+}
+
+.cta a {
+    display: inline-block;
+    width: 150px;
+    padding: 8px 12px;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cta a:hover {
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    opacity: 0.9;
+    padding: 10px;
+}
+
+/* History */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 250px 1fr;
+    background-color: var(--secondary-color);
+    gap: 20px;
+    padding: 20px;
+}
+
+.history img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Employees */
+.employee {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.location {
+    border: #333;
+}
+
+.box {
+    display: flex;
+}
+
+/* Location */
+.location {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+}
+
+/* Contact */
+.contact-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px;
+}
+
+.contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+}
+
+.contact iframe {
+    flex: 1;
+    width: 100%;
+    min-height: 350px;
+    border: none;
+    border-radius: 6px;
+}

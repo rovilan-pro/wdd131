@@ -1,18 +1,26 @@
-document.getElementById("currentyear").textContent =
-new Date().getFullYear();
+const year = document.getElementById("currentyear");
 
-document.getElementById("lastModified").textContent =
-`Last Modification: ${document.lastModified}`;
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
+
+const lastModified = document.getElementById("lastModified");
+
+if (lastModified) {
+    lastModified.textContent = `Last Modification: ${document.lastModified}`;
+}
 
 const menuButton = document.querySelector("#menu-button");
-const nav = document.querySelector("nav");
+const nav = document.querySelector(".navigation");
 
-menuButton.addEventListener("click", () => {
-    nav.classList.toggle("open");
+if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+        nav.classList.toggle("open");
 
-    if (nav.classList.contains("open")) {
-        menuButton.textContent = "✖";
-    } else {
-        menuButton.textContent = "☰";
-    }
-});
+        if (nav.classList.contains("open")) {
+            menuButton.textContent = "✖";
+        } else {
+            menuButton.textContent = "☰";
+        }
+    });
+}
