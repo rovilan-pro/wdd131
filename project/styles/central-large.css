@@ -1,14 +1,9 @@
 /* Big Screen*/
 @media screen and (min-width: 768px) {
 
-        header {
+    header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-    }
-
-    .header-top {
-        display: flex;
         align-items: center;
     }
 
@@ -16,19 +11,24 @@
         display: none;
     }
 
-    nav {
-        display: flex !important;
-        justify-content: center;
-    }
-    
     .navigation {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
+        display: flex;
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+        background: none;
+        padding: 0;
+        width: auto;
     }
 
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
+    footer {
+        flex-direction: row;
+        text-align: left;
+        gap: 0;
     }
 
+    .history {
+        grid-template-columns: 1fr 250px 1fr;
+    }
 }

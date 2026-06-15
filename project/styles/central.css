@@ -36,11 +36,16 @@ header, main, footer {
 
 /* Header */
 header {
+    max-width: 840px;
+    margin: 0 auto;
+    background: var(--secondary-color);
+}
+
+.header-top {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px;
 }
 
 header img {
@@ -55,21 +60,29 @@ header img {
     margin-left: 20px;
     color: var(--accent-color);
     flex-grow: 1;
-    width: 30px;
-    height: 30px;
 }
 
 
 /* Navigation */
 .navigation {
     display: none;
-    flex-direction: row;
+    flex-direction: column;
     position: absolute;
     right: 20px;
     top: 80px;
     background: var(--secondary-color);
     padding: 10px;
     border-radius: 6px;
+    z-index: 999;
+    gap: 10px;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation.open {
+    display: flex;
 }
 
 .navigation a {
@@ -82,11 +95,11 @@ header img {
 }
 
 #menu-button {
-    margin-left: auto;
-    font-size: 24px;
+    font-size: 26px;
     background: none;
     border: none;
     cursor: pointer;
+    margin-left: auto;
 }
 
 
@@ -141,23 +154,19 @@ footer p {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     padding: 20px;
-    background-color: var(--secondary-color);
-}
-
-.gallery figure {
-    margin: 0;
-    text-align: center;
-    background-color: white;
-    border-radius: 6px;
-    overflow: hidden;
 }
 
 .gallery img {
     width: 100%;
-    height: 240px;
+    height: auto;
     object-fit: contain;
-    display: block;
+}
 
+.gallery figure {
+    text-align: center;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 6px;
 }
 
 .gallery figcaption {
@@ -219,10 +228,7 @@ footer p {
 /* History */
 .history {
     display: grid;
-    grid-template-columns: 1fr 250px 1fr;
-    background-color: var(--secondary-color);
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: 1fr;
 }
 
 .history img {
@@ -260,10 +266,9 @@ footer p {
 /* Contact */
 .contact-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start;
     justify-content: center;
-    margin: 20px;
 }
 
 .contact {
@@ -273,6 +278,14 @@ footer p {
     gap: 10px;
     padding: 20px;
     background-color: var(--secondary-color);
+    border-radius: 6px;
+}
+
+.contact-container iframe {
+    width: 100%;
+    max-width: 400px;
+    min-height: 350px;
+    border: none;
     border-radius: 6px;
 }
 

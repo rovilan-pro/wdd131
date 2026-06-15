@@ -1,26 +1,61 @@
-const year = document.getElementById("currentyear");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (year) {
-    year.textContent = new Date().getFullYear();
-}
+    const menuButton = document.getElementById("menu-button");
+    const nav = document.querySelector(".navigation");
+    const lastModified = document.getElementById("lastModified");
 
-const lastModified = document.getElementById("lastModified");
+    if (menuButton && nav) {
+        menuButton.addEventListener("click", () => {
+            nav.classList.toggle("open");
 
-if (lastModified) {
-    lastModified.textContent = `Last Modification: ${document.lastModified}`;
-}
+            menuButton.textContent =
+                nav.classList.contains("open") ? "✖" : "☰";
+        });
+    }
 
-const menuButton = document.querySelector("#menu-button");
-const nav = document.querySelector(".navigation");
+    if (lastModified) {
+        lastModified.textContent =
+            `Last Modification: ${document.lastModified}`;
+    }
 
-if (menuButton && nav) {
-    menuButton.addEventListener("click", () => {
-        nav.classList.toggle("open");
+    const business = {
+        name: "Tala Maris",
+        location: "Dasmariñas, Cavite",
+        contact: "0908-775-1528"
+    };
 
-        if (nav.classList.contains("open")) {
-            menuButton.textContent = "✖";
-        } else {
-            menuButton.textContent = "☰";
+    console.log(business.name);
+    console.log(business.location);
+    console.log(business.contact);
+
+    const products = [
+        { name: "Maroon Coat", price: 8000 },
+        { name: "Wedding Dress Royal", price: 12000 },
+        { name: "Wedding Dress Floral", price: 12000 },
+        { name: "Orange Dress", price: 5000 },
+        { name: "Dark Blue Dress", price: 5000 }
+    ];
+
+    const figures = document.querySelectorAll(".gallery figure");
+
+    figures.forEach((fig, index) => {
+        const product = products[index];
+
+        if (product) {
+            const captions = fig.querySelectorAll("figcaption");
+
+            if (captions.length >= 2) {
+                captions[0].textContent = product.name;
+                captions[1].textContent = `₱${product.price}`;
+            }
         }
     });
-}
+
+    document.body.appendChild(productList);
+
+        if (!localStorage.getItem("visited")) {
+            alert("Welcome to Tala Maris!");
+            ocalStorage.setItem("visited", "true");
+        }
+
+    });
